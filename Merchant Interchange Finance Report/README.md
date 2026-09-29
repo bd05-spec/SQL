@@ -1,4 +1,4 @@
-# ðŸ’± Merchant Interchange Finance Analysis
+# Merchant Interchange Finance Analysis
 
 > **Question:** How are settlement volume and interchange revenue distributed across merchants, cards, acquirer networks, products, and reporting periods?
 
@@ -8,10 +8,10 @@ The project contains a sample of **600 transaction-summary records** and a Micro
 
 ```mermaid
 flowchart LR
-    A[600-row interchange sample] --> B[Quality checks<br/>nulls Â· dates Â· duplicates Â· amounts]
+    A[600-row interchange sample] --> B[Quality checks<br/>nulls  |  dates  |  duplicates  |  amounts]
     B --> C[Trim source text]
-    C --> D[Build dimensions<br/>date Â· merchant Â· card Â· acquirer Â· category]
-    D --> E[Load Fact_Interchange<br/>volume Â· revenue Â· transaction count]
+    C --> D[Build dimensions<br/>date  |  merchant  |  card  |  acquirer  |  category]
+    D --> E[Load Fact_Interchange<br/>volume  |  revenue  |  transaction count]
     E --> F[Rank, rate, share<br/>and compare reporting months]
 ```
 
