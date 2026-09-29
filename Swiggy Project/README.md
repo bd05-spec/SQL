@@ -1,4 +1,4 @@
-# ðŸ½ï¸ Swiggy Food-Delivery Sales Analysis
+# Swiggy Food-Delivery Sales Analysis
 
 > **Question:** How do order volume, menu categories, restaurants, locations, prices, and ratings vary across the supplied food-delivery records?
 
@@ -10,9 +10,9 @@ This SQL Server project uses **197,430 source rows** to demonstrate data-quality
 flowchart LR
     A[Swiggy_Data.csv<br/>197,430 source rows] --> B[Stage as swiggy_data]
     B --> C[Check nulls and blanks<br/>review duplicate rows]
-    C --> D[Build dimensions<br/>date Â· location Â· restaurant Â· category Â· dish]
-    D --> E[Populate fact_swiggy_orders<br/>price Â· rating Â· rating count]
-    E --> F[Trend and mix analysis<br/>time Â· geography Â· food Â· spend Â· ratings]
+    C --> D[Build dimensions<br/>date  |  location  |  restaurant  |  category  |  dish]
+    D --> E[Populate fact_swiggy_orders<br/>price  |  rating  |  rating count]
+    E --> F[Trend and mix analysis<br/>time  |  geography  |  food  |  spend  |  ratings]
 ```
 
 ## Business questions represented in the project
@@ -21,7 +21,7 @@ flowchart LR
 - How does order volume vary by month, quarter, year, and day of week?
 - Which cities and restaurants have the most recorded orders?
 - How does revenue vary by state, and which categories/cuisines and dishes have the most orders?
-- How are records distributed across spend bands: under 100, 100â€“199, 200â€“299, 300â€“499, and 500+?
+- How are records distributed across spend bands: under 100, 100-199, 200-299, 300-499, and 500+?
 - What does the rating-count distribution from 1 to 5 look like, and how do category order volume and average rating compare?
 
 These questions come from the included requirements document; the README does not assert specific output values that are not reported in the repository.
