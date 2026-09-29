@@ -1,19 +1,19 @@
-# ðŸ’³ Bank Customer & Card Portfolio Analysis
+# Bank Customer & Card Portfolio Analysis
 
 > **Question:** How is the observed cardholder portfolio distributed across customer segments, balances, credit limits, and utilization levels?
 
 This Microsoft SQL Server project contains a **1,627-row, 13-column** customer dataset and a set of queries for portfolio profiling. It calculates baseline customer and credit measures, compares customer segments, and highlights high-utilization and long-tenure accounts for further review.
 
-> **Scope clarification:** The CSV contains a `churn` field, but the current SQL script does not calculate churn counts or churn rates by segment. Despite the project folder's â€œBank churnâ€ name, its present queries focus on descriptive customer/card analyticsâ€”not on explaining or predicting churn.
+> **Scope clarification:** The CSV contains a `churn` field, but the current SQL script does not calculate churn counts or churn rates by segment. Despite the project folder's "Bank churn" name, its present queries focus on descriptive customer/card analytics-not on explaining or predicting churn.
 
 ## Analysis map
 
 ```mermaid
 flowchart LR
     A[bank_churn_data.csv<br/>1,627 records] --> B[Load as<br/>bank_churn_data]
-    B --> C[Portfolio KPIs<br/>customers Â· age Â· limits Â· utilization]
-    C --> D[Segment comparisons<br/>card Â· income Â· marital Â· age]
-    D --> E[Account review<br/>high utilization Â· low balance-to-limit]
+    B --> C[Portfolio KPIs<br/>customers  |  age  |  limits  |  utilization]
+    C --> D[Segment comparisons<br/>card  |  income  |  marital  |  age]
+    D --> E[Account review<br/>high utilization  |  low balance-to-limit]
     E --> F[Tenure and dependent<br/>summaries]
 ```
 
@@ -22,7 +22,7 @@ flowchart LR
 - Total customer count, average utilization ratio, average credit limit, and average age.
 - Customer counts by card category and marital status.
 - Average balance and dependent count by income band.
-- Customer distribution by age groups (18â€“25, 26â€“35, 36â€“45, 46â€“55, and 56+).
+- Customer distribution by age groups (18-25, 26-35, 36-45, 46-55, and 56+).
 - Top accounts by utilization, longest relationship length, and a low-balance-to-credit-limit comparison.
 - A rule-based utilization label: **High Risk** above 0.80, **Moderate Risk** from 0.50 through 0.80, and **Low Risk** below 0.50. This thresholding is a screening convention in the script, not a validated risk model.
 
