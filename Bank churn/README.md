@@ -9,7 +9,7 @@
 
 This Microsoft SQL Server project contains a **1,627-row, 13-column** customer dataset and a set of queries for portfolio profiling. It calculates baseline customer and credit measures, compares customer segments, and highlights high-utilization and long-tenure accounts for further review.
 
-> **Scope clarification:** The CSV contains a `churn` field, but the current SQL script does not calculate churn counts or churn rates by segment. Despite the project folder's "Bank churn" name, its present queries focus on descriptive customer/card analytics-not on explaining or predicting churn.
+> **Scope note:** The source CSV includes a `churn` field. The current queries focus on descriptive customer and card-portfolio measures, including utilization; churn rates and churn prediction are outside this analysis.
 
 ## Analysis map
 

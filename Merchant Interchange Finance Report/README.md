@@ -41,7 +41,7 @@ The script also checks for nulls, repeated interchange IDs, duplicate rows, inva
 
 ## Run safely
 
-Use Microsoft SQL Server. First create a development database and load the CSV into a table named **`Sample Interchange Dataset`** with compatible data types. Review the script before running it: its text-trimming section updates the loaded source table, its `CREATE TABLE` statements are not guarded for repeat execution, and the standalone line `Card Number Table` is not valid T-SQL as written. Remove/comment that heading or correct it before running the schema section. Run against a disposable copy until table definitions, date conversion, keys, and duplicate assumptions have been checked.
+Use Microsoft SQL Server. Create a development database and load the CSV into a table named **`Sample Interchange Dataset`** with compatible data types. The script trims text in that source table, so run it on a disposable staging copy. Its `CREATE TABLE` statements are intended for a fresh schema and are not guarded for repeat execution; use a clean development database for the initial run. Review the date conversion, keys, and duplicate assumptions before relying on the results.
 
 ## Assumptions to review
 

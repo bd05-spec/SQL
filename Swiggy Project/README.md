@@ -40,11 +40,11 @@ These questions come from the included requirements document; the README does no
 | [`Business Requirements.docx`](<./Business Requirements.docx>) | The analysis brief: validation, star-schema design, KPI list, and requested business breakdowns. |
 | [`SQL Queries_SWIGGY SALES ANALYSIS.docx`](<./SQL Queries_SWIGGY SALES ANALYSIS.docx>) | A companion document containing the query workflow and analysis requirements. |
 
-## Important setup before execution
+## Data import and run notes
 
-The CSV headers do **not** match the SQL names verbatim. For example, the CSV uses `Order Date`, `Price (INR)`, `Restaurant Name`, and `Rating Count`, while the SQL expects names such as `Order_Date`, `Price_INR`, `Restaurant_Name`, and `Rating_Count`. Before running the script, create a staging table and map/rename the CSV columns (or update the SQL consistently); also assign compatible date, decimal, and integer types. The script assumes that this staging table is already named `swiggy_data`.
+The CSV headers and SQL identifiers differ. For example, the CSV uses `Order Date`, `Price (INR)`, `Restaurant Name`, and `Rating Count`, while the SQL expects `Order_Date`, `Price_INR`, `Restaurant_Name`, and `Rating_Count`. Import the CSV to a staging table named `swiggy_data`, map or rename these fields consistently, and assign compatible date, decimal, and integer types before running the script.
 
-The script deletes duplicate rows from `swiggy_data` using a `DELETE` CTE. Load into a disposable staging copy and inspect the duplicate definition before executing that statement. The `ROW_NUMBER` ordering is unspecified, so the retained duplicate is not deterministic when otherwise-identical rows are present. Dimension/fact `CREATE TABLE` and `INSERT` statements also need a fresh or deliberately reset database to avoid rerun conflicts.
+The script includes a `DELETE` CTE that removes rows classified as duplicates from `swiggy_data`. Preserve the original CSV and use a disposable staging copy; review the duplicate criteria before running this step. Because the `ROW_NUMBER` ordering is unspecified, which identical duplicate row is retained is not deterministic. The dimension and fact table creation/insertion steps are intended for a fresh or deliberately reset database, not repeated execution against populated tables.
 
 ## Grain and interpretation
 

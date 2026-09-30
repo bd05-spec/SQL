@@ -157,7 +157,7 @@ CREATE TABLE Dim_Merchant (
 );
 
 
-Card Number Table
+-- Card dimension
 CREATE TABLE Dim_Card (
     CardKey INT IDENTITY(1,1) PRIMARY KEY,
     CardNumber VARCHAR(50)
@@ -350,7 +350,7 @@ JOIN Dim_Merchant dm
 GROUP BY dm.MerchantName
 ORDER BY TotalInterchangeVolume DESC;
 
---Can we see the current rank, interchange revenue, and percentage of total versus the previous month’s rank, interchange revenue, and percentage of total?
+--Can we see the current rank, interchange revenue, and percentage of total versus the previous monthÂ’s rank, interchange revenue, and percentage of total?
 
 WITH MonthlyData AS 
 (
