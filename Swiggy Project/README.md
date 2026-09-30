@@ -15,9 +15,9 @@ This SQL Server project uses **197,430 source rows** to demonstrate data-quality
 flowchart LR
     A[Swiggy_Data.csv<br/>197,430 source rows] --> B[Stage as swiggy_data]
     B --> C[Check nulls and blanks<br/>review duplicate rows]
-    C --> D[Build dimensions<br/>date  |  location  |  restaurant  |  category  |  dish]
-    D --> E[Populate fact_swiggy_orders<br/>price  |  rating  |  rating count]
-    E --> F[Trend and mix analysis<br/>time  |  geography  |  food  |  spend  |  ratings]
+    C --> D[Build dimensions<br/>date, location, restaurant, category, dish]
+    D --> E[Populate fact_swiggy_orders<br/>price, rating, rating count]
+    E --> F[Trend and mix analysis<br/>time, geography, food, spend, ratings]
 ```
 
 ## Business questions represented in the project

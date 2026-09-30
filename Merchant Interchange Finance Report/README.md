@@ -13,10 +13,10 @@ The project contains a sample of **600 transaction-summary records** and a Micro
 
 ```mermaid
 flowchart LR
-    A[600-row interchange sample] --> B[Quality checks<br/>nulls  |  dates  |  duplicates  |  amounts]
+    A[600-row interchange sample] --> B[Quality checks<br/>nulls, dates, duplicates, amounts]
     B --> C[Trim source text]
-    C --> D[Build dimensions<br/>date  |  merchant  |  card  |  acquirer  |  category]
-    D --> E[Load Fact_Interchange<br/>volume  |  revenue  |  transaction count]
+    C --> D[Build dimensions<br/>date, merchant, card, acquirer, category]
+    D --> E[Load Fact_Interchange<br/>volume, revenue, transaction count]
     E --> F[Rank, rate, share<br/>and compare reporting months]
 ```
 

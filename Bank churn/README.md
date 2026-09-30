@@ -16,9 +16,9 @@ This Microsoft SQL Server project contains a **1,627-row, 13-column** customer d
 ```mermaid
 flowchart LR
     A[bank_churn_data.csv<br/>1,627 records] --> B[Load as<br/>bank_churn_data]
-    B --> C[Portfolio KPIs<br/>customers  |  age  |  limits  |  utilization]
-    C --> D[Segment comparisons<br/>card  |  income  |  marital  |  age]
-    D --> E[Account review<br/>high utilization  |  low balance-to-limit]
+    B --> C[Portfolio KPIs<br/>customers, age, limits, utilization]
+    C --> D[Segment comparisons<br/>card, income, marital, age]
+    D --> E[Account review<br/>high utilization, low balance-to-limit]
     E --> F[Tenure and dependent<br/>summaries]
 ```
 
