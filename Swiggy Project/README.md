@@ -1,5 +1,10 @@
 # Swiggy Food-Delivery Sales Analysis
 
+![Project workflow overview](./project-overview.svg)
+
+> Workflow illustration only; it is not a dashboard screenshot or a source of measured results.
+
+
 > **Question:** How do order volume, menu categories, restaurants, locations, prices, and ratings vary across the supplied food-delivery records?
 
 This SQL Server project uses **197,430 source rows** to demonstrate data-quality checks and dimensional modeling for food-delivery analysis. It builds date, location, restaurant, category, and dish dimensions around a central fact table, then queries sales and order patterns by time, geography, cuisine, restaurant, dish, and price band.

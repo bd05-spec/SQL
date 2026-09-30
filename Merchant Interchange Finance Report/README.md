@@ -1,5 +1,10 @@
 # Merchant Interchange Finance Analysis
 
+![Project workflow overview](./project-overview.svg)
+
+> Workflow illustration only; it is not a dashboard screenshot or a source of measured results.
+
+
 > **Question:** How are settlement volume and interchange revenue distributed across merchants, cards, acquirer networks, products, and reporting periods?
 
 The project contains a sample of **600 transaction-summary records** and a Microsoft SQL Server script that takes the data from quality checks into a star-schema-style model. The final queries compare merchant settlement volume, calculate interchange revenue as a share of settlement, rank merchants, and inspect month-over-month changes.

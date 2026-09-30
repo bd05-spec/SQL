@@ -1,5 +1,10 @@
 # Bank Customer & Card Portfolio Analysis
 
+![Project workflow overview](./project-overview.svg)
+
+> Workflow illustration only; it is not a dashboard screenshot or a source of measured results.
+
+
 > **Question:** How is the observed cardholder portfolio distributed across customer segments, balances, credit limits, and utilization levels?
 
 This Microsoft SQL Server project contains a **1,627-row, 13-column** customer dataset and a set of queries for portfolio profiling. It calculates baseline customer and credit measures, compares customer segments, and highlights high-utilization and long-tenure accounts for further review.
